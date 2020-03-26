@@ -1,0 +1,10 @@
+CD_OPERACAO;DT_INICIO;DT_FIM;NM_EMPRESA;NM_MESA;NM_ESTRATEGIA;NM_CENTRALIZADOR;NM_GESTOR;NM_SUBGESTOR;NM_SUBPRODUTO;NM_CARACTERISTICA;CD_ATIVO_OBJETO;QUANTIDADE;ID_PRECO
+722778690;04/01/2018;03/09/2018;empaaa;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;375000000;7860
+722778702;04/01/2018;02/01/2020;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-495000000;7829
+722778711;04/01/2018;03/06/2019;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-495000000;7860
+722778718;04/01/2018;02/12/2019;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-495000000;7860
+722778721;04/01/2018;02/05/2018;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-105000000;7829
+722778743;04/01/2018;02/07/2018;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;375000000;7860
+722778750;04/01/2018;01/03/2018;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-375000000;7829
+722778760;04/01/2018;02/07/2018;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-375000000;7829
+722778764;04/01/2018;03/09/2018;empfff;mesabbb;estaaa;centaaa;gestaaa;subaaa;subphhh;carac;cdat;-125000000;7860
