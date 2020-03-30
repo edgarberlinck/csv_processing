@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import io.github.edgarberlinck.handlers.ResourceHandler;
-import io.github.edgarberlinck.model.DadoMercado;
-import io.github.edgarberlinck.model.Operacao;
+import io.github.edgarberlinck.model.MarketData;
+import io.github.edgarberlinck.model.Operation;
 import io.github.edgarberlinck.readers.CsvReader;
 
 public class CalculateOperationResultTest {
@@ -36,10 +36,10 @@ public class CalculateOperationResultTest {
         final String ID_PRECO = "7829";
 
         ArrayList<Serializable> marketData = null;
-        Operacao operation = null;
+        Operation operation = null;
 
         for (Serializable given : operationList.get(ID_PRECO)) {
-            operation = (Operacao) given;            
+            operation = (Operation) given;            
             marketData = marketDataList.get(ID_PRECO);
         }
 

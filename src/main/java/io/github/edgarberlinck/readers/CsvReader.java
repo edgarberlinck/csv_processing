@@ -32,7 +32,7 @@ public class CsvReader {
                     if (data == null) {
                         data = new ArrayList<Serializable>();
                     }
-                    data.add(new Operacao(records[0], records[9], records[12]));
+                    data.add(new Operation(records[0], records[9], records[12]));
 
                     output.put(records[13], data);
                 } else {
@@ -40,7 +40,7 @@ public class CsvReader {
                     if (data == null) {
                         data = new ArrayList<Serializable>();
                     }
-                    data.add(new DadoMercado(records[2]));
+                    data.add(new MarketData(records[2]));
 
                     output.put(records[0], data);
                 }

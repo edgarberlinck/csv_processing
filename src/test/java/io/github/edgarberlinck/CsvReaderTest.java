@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
@@ -14,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import io.github.edgarberlinck.handlers.*;
-import io.github.edgarberlinck.model.Operacao;
+import io.github.edgarberlinck.model.Operation;
 import io.github.edgarberlinck.readers.*;
 
 public class CsvReaderTest {
@@ -50,18 +49,18 @@ public class CsvReaderTest {
     @Test
     public void shouldHaveTheCorrectOperationDataForTheGivemKey () {
         ArrayList<Serializable> expectedOperations = new ArrayList<>(5);
-        expectedOperations.add(new Operacao("722778690", "subphhh", "375000000"));
-        expectedOperations.add(new Operacao("722778711", "subphhh", "-495000000"));
-        expectedOperations.add(new Operacao("722778718", "subphhh", "-495000000"));
-        expectedOperations.add(new Operacao("722778743", "subphhh", "375000000"));
-        expectedOperations.add(new Operacao("722778764", "subphhh", "-125000000"));
+        expectedOperations.add(new Operation("722778690", "subphhh", "375000000"));
+        expectedOperations.add(new Operation("722778711", "subphhh", "-495000000"));
+        expectedOperations.add(new Operation("722778718", "subphhh", "-495000000"));
+        expectedOperations.add(new Operation("722778743", "subphhh", "375000000"));
+        expectedOperations.add(new Operation("722778764", "subphhh", "-125000000"));
 
         assertArrayEquals("Expected Operations did not match", expectedOperations.toArray(), operationList.get("7860").toArray());
     }
 
     @Test
     public void shouldNotHaveIncorrectOperationDataForTheGivemKey () {
-        Serializable invalidOperation = (new Operacao("722778702", "subphhh", "-495000000"));
+        Serializable invalidOperation = (new Operation("722778702", "subphhh", "-495000000"));
         assertFalse("Unespected value on your collection, dumbass..", operationList.get("7860").contains(invalidOperation));
     }
 

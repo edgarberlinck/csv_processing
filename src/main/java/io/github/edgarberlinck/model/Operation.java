@@ -2,17 +2,14 @@ package io.github.edgarberlinck.model;
 
 import java.io.Serializable;
 
-import lombok.Getter;
-import lombok.Setter;
-
 // @TODO Should be in english
-public class Operacao implements Serializable {
+public class Operation implements Serializable {
   /**
    *
    */
   private static final long serialVersionUID = -5359381399354954085L;
 
-  public Operacao(String codigoOperacao, String nomeSubproduto, String quantidade) {
+  public Operation(String codigoOperacao, String nomeSubproduto, String quantidade) {
     this.codigoOperacao = codigoOperacao;
     this.nomeSubproduto = nomeSubproduto;
     this.quantidade = Integer.parseInt(quantidade);
@@ -56,7 +53,7 @@ public class Operacao implements Serializable {
   public void setNomeSubproduto(String nomeSubproduto) {
     this.nomeSubproduto = nomeSubproduto;
   }
-  
+
   /**
    * @param quantidade the quantidade to set
    */
@@ -66,8 +63,8 @@ public class Operacao implements Serializable {
 
   @Override
     public boolean equals(Object obj) {
-      if (obj instanceof Operacao) {
-        Operacao given = (Operacao) obj;
+      if (obj instanceof Operation) {
+        Operation given = (Operation) obj;
         return (given.codigoOperacao.equals(this.codigoOperacao))
                 && (given.nomeSubproduto.equals(this.nomeSubproduto)) && (given.quantidade.equals(this.quantidade));
       }
