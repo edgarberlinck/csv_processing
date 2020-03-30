@@ -6,26 +6,43 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Map;
 
 import io.github.edgarberlinck.model.*;
 
 public class CsvReader {
-    public Map<String, Serializable> processCsvFile(File csv) {
+    public Map<String, ArrayList<Serializable>> processCsvFile(File csv) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(csv));
-            Map<String, Serializable> output = new HashMap<String, Serializable>();
+            Map<String, ArrayList<Serializable>> output = new HashMap<String, ArrayList<Serializable>>();
             String line;
             String header = br.readLine();
         
             Boolean isFileOperaco = (header.split(";").length > 3); 
 
+            ArrayList<Serializable> data;
+            String[] records;
+            
+            // @TODO: Refactor me, for the love of GOD!!!!
             while ((line = br.readLine()) != null) {
-                String[] records = line.split(";");
+                records = line.split(";");
                 if (isFileOperaco) {
-                    output.put(records[13], new Operacao(records[0], records[9], records[12]));
+                    data = output.get(records[13]);
+                    if (data == null) {
+                        data = new ArrayList<Serializable>();
+                    }
+                    data.add(new Operacao(records[0], records[9], records[12]));
+
+                    output.put(records[13], data);
                 } else {
-                    output.put(records[0], new DadoMercado(records[2]));
+                    data = output.get(records[0]);
+                    if (data == null) {
+                        data = new ArrayList<Serializable>();
+                    }
+                    data.add(new DadoMercado(records[2]));
+
+                    output.put(records[0], data);
                 }
             }
             br.close();

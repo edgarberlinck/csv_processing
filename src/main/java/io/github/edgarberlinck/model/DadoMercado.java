@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 
+// @TODO Should be in english....
 public class DadoMercado implements Serializable {
     /**
      *
